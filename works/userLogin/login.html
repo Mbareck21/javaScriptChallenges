@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="text-slate-300 bg-[#383d44] p-4 font-mono">
+		<main class="flex flex-col gap-4 w-full p-2">
+			<h1 class="text-4xl font-bold mb-4 text-center">Login Verification</h1>
+
+			<p class="text-center justify-left">
+				If you're already logged in, please go to your
+				<button
+					type="button"
+					class="border rounded-lg p-2 mx-auto my-auto hover:text-orange-500">
+					<a href="./unauthorizedPage.html"> Private Page</a>
+				</button>
+				Please verify your registered account information to access your private
+				page
+			</p>
+			<p id="errMessage" class="text-red-500 text-center"></p>
+			<div class="flex flex-col gap-2 justify-center items-center">
+				<span
+					class="text-orange-500 fon text-2xl text-center p-2"
+					id="errMessage"></span>
+
+				<div class="flex flex-col gap-2">
+					<label for="name" class="border rounded p-1 mx-auto text-slate-300">
+						Name:
+						<input
+							type="text"
+							id="name"
+							placeholder="Name"
+							class="border rounded p-1 mx-auto text-slate-950" />
+					</label>
+					<label
+						for="password"
+						class="border rounded p-1 mx-auto text-slate-300">
+						Password:
+						<input
+							type="number"
+							id="password"
+							placeholder="Password"
+							class="border rounded p-1 mx-auto text-slate-950" />
+					</label>
+				</div>
+				<div class="flex justify-center w-25 gap-4 mx-auto">
+					<button
+						id="loginbtn"
+						type="button"
+						class="border rounded-lg hover:text-orange-500 p-2 mx-auto font-bold">
+						Log In
+					</button>
+					<button
+						type="button"
+						class="border rounded-lg hover:text-orange-500 p-2 mx-auto font-bold">
+						<a href="./signUp.html">Sign Up</a>
+					</button>
+				</div>
+			</div>
+		</main>
+		<script src="./logIn.js"></script>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>My Div Page</title>
+		<style>
+			#header {
+				height: 10vh;
+				text-align: center;
+				border-radius: 5px;
+				border: none;
+				margin-bottom: 5px;
+				background: #f6b93b;
+			}
+			#middle {
+				height: 75vh;
+				text-align: center;
+				border-radius: 10px;
+				border: none;
+				margin-bottom: 5px;
+				background: lightgrey;
+				padding: 3rem;
+			}
+			#footer {
+				height: 5vh;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+				border-radius: 5px;
+				background: darkcyan;
+			}
+			#footer > p {
+				position: relative;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+			}
+			#menu {
+				display: flex;
+				flex-direction: column;
+				float: left;
+				text-align: left;
+			}
+			#menu > a {
+				text-decoration: none;
+				font-size: 24px;
+				color: forestgreen;
+			}
+			#menu > a:link {
+				color: firebrick;
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			#menu > a:hover {
+				color: darkred;
+				background-color: lightseagreen;
+				text-decoration: underline;
+				border-radius: 5px;
+				padding: 2px;
+			}
+
+			#menu > a:visited {
+				color: rgb(3, 67, 42);
+				background-color: transparent;
+				text-decoration: none;
+			}
+
+			#main {
+                
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">HEADER</div>
+		<div id="middle">
+			<div id="menu">
+				<a href="#">Work</a>
+				<a href="#">Hobbies</a>
+				<a href="#">Studies</a>
+				<a href="#">Other</a>
+			</div>
+			<div id="main">
+				<h3>Software Development</h3>
+				<p>This element is fixed!
+			<div id="about"></div>
+		</div>
+		<div id="footer"><p>Copyright 2023 by MOHAMED M.</p></div>
+	</body>
+</html>
+`

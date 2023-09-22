@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5em;
+        background: #b7b7bd33;
+      }
+
+      main {
+        margin-bottom: 10px;
+      }
+      header {
+        /* background-color: #fff; */
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: none;
+        margin: 0;
+        background: rgba(36, 36, 38, 0.2);
+        box-shadow: 5px 0px 20px rgb(222, 223, 224),
+          inset 0 -10px 5px rgba(20, 10, 10, 0);
+      }
+
+      .navbar-brand-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .navbar-brand:hover {
+        color: #000;
+      }
+      .navbar-brand {
+        font-size: 30px;
+        font-weight: bold;
+        color: #ff6a3d;
+        text-decoration: none;
+      }
+
+      .navbar-brand-container img {
+        position: absolute;
+        left: 50%;
+        width: 100px;
+        border: none;
+        border-radius: 250px;
+        transform: scaleX(-1);
+        box-shadow: 0 0px 20px rgb(222, 223, 224),
+          inset 0 -10px 20px rgba(20, 10, 10, 0);
+        backdrop-filter: blur(20px);
+        z-index: -1;
+      }
+      .navbar-brand-container img:hover {
+        /* z-index: 2; */
+        background-color: #1a2238;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .navbar li {
+        list-style: none;
+      }
+      .navbar li a {
+        color: #f4db7d;
+        padding: 15px;
+        text-decoration: none;
+        color: #171616;
+        font-weight: bold;
+      }
+      .navbar li a:hover {
+        color: #f44336;
+      }
+      #input {
+        border: 2px solid tomato;
+        border-radius: 10px;
+        max-height: 2em;
+        padding: 0.5em;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1em;
+
+      }
+      .assignment {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border: #e6e3e3 solid;
+        border-radius: 10%;
+        overflow: hidden;
+      }
+      .assignment_title {
+        margin-bottom: 0;
+        background: #ebacac;
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+      }
+      .assignment_title a {
+        margin-bottom: 0;
+        text-decoration: none;
+      }
+      .assignment_img {
+        max-width: 10rem;
+        max-height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="#">Mo.M</a>
+        <img src="../assets/images/ai.png" alt="ai image" />
+      </div>
+      <input type="text" name="input" placeholder="Search" id="input" />
+      <ul class="navbar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./works/works.html">Works</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="container">
+        <div class="assignment">
+          <h3 class="assignment_title">
+            <a href="./june_first_assignment.html">Advanced CSS Challenge</a>
+          </h3>
+          <img
+            src="../assets/images/pokeball.png"
+            alt=""
+            class="assignment_img"
+          />
+          <p class="assignemnt_p">Pokemons</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./signUp.js"></script>
+	</head>
+	<body class="bg-gray-900 text-gray-100">
+		<main class="container mx-auto p-4 gap-2 flex flex-col">
+			<h1 class="text-4xl font-bold text-center mb-4">Register User Account</h1>
+			<p class="text-center">
+				Please register your user account information or login to access your
+				account
+			</p>
+			<button
+				type="button"
+				class="bg-gray-800 text-white font-medium py-2 px-4 border border-transparent rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 max-w-sm mx-auto">
+				<a href="./unauthorizedPage.html">Visit Your Profile</a>
+			</button>
+
+			<div class="flex flex-col gap-2 justify-center items-center mt-8">
+				<span
+					class="text-red-500 font-bold text-center p-2"
+					id="errMessage"></span>
+
+				<div class="flex flex-col gap-2 w-full md:w-1/2 lg:w-1/3">
+					<label for="name" class="border rounded p-1">
+						Name:
+						<input
+							type="text"
+							id="name"
+							placeholder="Name"
+							class="block w-full text-gray-900 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50 bg-gray-100 py-2 px-3 rounded-md shadow-sm" />
+					</label>
+
+					<label for="password" class="border rounded p-1">
+						Password:
+						<input
+							type="password"
+							id="password"
+							placeholder="Password"
+							class="block w-full text-gray-900 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50 bg-gray-100 py-2 px-3 rounded-md shadow-sm" />
+					</label>
+
+					<label for="deposit" class="border rounded p-1">
+						Deposit:
+						<input
+							type="number"
+							id="deposit"
+							placeholder="Your deposit amount"
+							class="block w-full text-gray-900 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 focus:ring-opacity-50 bg-gray-100 py-2 px-3 rounded-md shadow-sm" />
+					</label>
+				</div>
+				<div
+					class="flex justify-center w-25 gap-2 mx-auto flex-col md:flex-row">
+					<button
+						onclick="saveData()"
+						type="button"
+						class="bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring ring-indigo-dark text-white font-bold py-2 px-4 rounded-md shadow-md mt-[20px] mx-auto w-[200px] transition duration-[200ms] ease-in-out">
+						Sign Up
+					</button>
+					<button
+						type="button"
+						class="bg-indigo-900 hover:bg-indigo-700 focus:outline-none focus:ring ring-indigo-dark text-white font-bold py-2 px-4 rounded-md shadow-md mt-[20px] mx-auto w-[200px] transition duration-[200ms] ease-in-out">
+						<a href="./login.html">Login</a>
+					</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

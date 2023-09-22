@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>About Me</title>
+		<style>
+	* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				font-family: "Roboto", sans-serif;
+				line-height: 1.5em;
+				background: #b7b7bd33;
+				background-image: url('./assets/images/ai2.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				
+			}
+
+			
+			header {
+				/* background-color: #fff; */
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				border: none;
+				margin: 0;
+				background: rgba(36, 36, 38, 0.2);
+				box-shadow: 5px 0px 20px rgb(222, 223, 224),
+					inset 0 -10px 5px rgba(20, 10, 10, 0);
+			}
+
+			.navbar-brand-container {
+				position: relative;
+				display: flex;
+				align-items: center;
+				padding: 2rem;
+			}
+
+			.navbar-brand:hover {
+				color: #000;
+			}
+			.navbar-brand {
+				font-size: 30px;
+				font-weight: bold;
+				color: #ff6a3d;
+				text-decoration: none;
+			}
+
+			.navbar-brand-container img {
+				position: absolute;
+				left: 50%;
+				width: 100px;
+				border: none;
+				border-radius: 250px;
+				transform: scaleX(-1);
+				box-shadow: 0 0px 20px rgb(222, 223, 224),
+					inset 0 -10px 20px rgba(20, 10, 10, 0);
+				backdrop-filter: blur(20px);
+				z-index: -1;
+			}
+			.navbar-brand-container img:hover {
+				
+				background-color: #1a2238;
+			}
+
+			.navbar {
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+			.navbar li {
+				list-style: none;
+			}
+			.navbar li a {
+				color: #f4db7d;
+				padding: 15px;
+				text-decoration: none;
+				color: #171616;
+				font-weight: bold;
+			}
+			.navbar li a:hover {
+				color: #f44336;
+			}
+			#input{
+				border: 2px solid tomato;
+				border-radius: 10px;
+				max-height: 2em;
+				padding: 0.5em;
+				
+			}
+		
+			main {
+				margin-bottom: 10px;
+				
+				display: flex;
+				gap: 5rem;
+				flex-direction: column;
+				color: white;
+				
+				padding: 2em;
+				
+
+			}
+			main h2 {
+				text-align: center;
+				font-size: 24px;
+				font-weight: larger;
+				font-weight: bolder;
+
+			}
+			.main-p-center{
+				text-align: center;
+				margin-bottom: 2em;
+			}
+			main p {
+				padding: 1.5em;
+				max-width: 70%;
+				margin: auto;
+				line-height: 1.5rem;
+				border-radius: 10px;
+				box-shadow: 0 0px 210px rgb(15, 15, 15),
+					inset 0 -10px 20px rgba(20, 10, 10, 0.2);
+				backdrop-filter: blur(20px);
+				border-radius: 10;
+
+				
+			}
+			main a {
+				text-decoration: none;
+				font-weight: bolder;
+				padding: 1em;
+				color: #ff6a3d;
+				background: #000;
+				border-radius: 15px;
+			}
+			main a:hover {
+				text-decoration: none;
+				font-weight: bolder;
+				padding: 1em;
+				color: #000;
+				background: #ff6a3d;
+				border-radius: 15px;
+			}
+			strong {
+				color: #ff6a3d;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="navbar-brand-container">
+				<a class="navbar-brand" href="#">Mo.M</a>
+				<img src="./assets/images/ai.png" alt="ai image" />
+			</div>
+			<input type="text" name="input" placeholder="Search" id="input">
+
+			<ul class="navbar">
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="#">Works</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+	<main>
+			<h2>Welcome to my website</h2>
+		<span class="main-p-center">
+			I am <strong><em>Mohamed M....</em></strong>
+		</span>
+
+		<p>
+			As an aspiring web developer, I am excited to embark on a journey of
+			learning and exploration in the world of web development. I am eager to
+			acquire new skills and knowledge in web development technologies,
+			including HTML, CSS, JavaScript, and other programming languages. With a
+			passion for creating beautiful and functional websites and applications, I
+			am ready to immerse myself in the world of web development and start
+			building my portfolio of projects.
+			
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero beatae nemo ducimus debitis reprehenderit saepe exercitationem, nobis soluta eos et illum, consequatur ab dicta adipisci sunt ullam consectetur tenetur quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sunt beatae enim magni harum aperiam maxime iste ipsam asperiores vel cum cumque eos quos quod dolorum reprehenderit, placeat nobis facere.
+		</p>
+		<span style="text-align: center"
+		><a href="https://www.linkedin.com/">Get in touch</a></span
+		>
+	</main>
+	</body>
+</html>

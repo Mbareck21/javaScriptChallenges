@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Number Guess Game</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		class="text-slate-300 bg-[#383d44] font-mono Class Properties font-light">
+		<header
+			class="flex flex-col gap-2 items-center p-4 bg-[#383d44] md:flex-row justify-between items-center">
+			<a
+				class="border-double border-4 border-sky-500 rounded p-2 hover:border-orange-50"
+				href="#"
+				>Mo.M</a
+			>
+
+			<ul role="list" class="flex justify-between gap-4 text-lg">
+				<li class="hover:border-b-2 text-orange-500 hover:font-serif">
+					<a href="./index.html">Home</a>
+				</li>
+				<li class="hover:border-b-2 hover:font-serif">
+					<a href="#">About</a>
+				</li>
+				<li class="hover:border-b-2 hover:font-serif">
+					<a href="#">Works</a>
+				</li>
+				<li class="hover:border-b-2 hover:font-serif">
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</header>
+		<main
+			class="mx-auto w-86 flex flex-col md:grid p-4 gap-4 items-center text-center">
+			<h1 class="font-bold text-center text-4xl">Number Guessing Game</h1>
+			<div
+				class="flex items-center text-center w-62 mx-auto justify-between gap-2">
+				<span>Difficulty Level</span>
+				<select
+					name=""
+					id="select"
+					class="text-slate-300 bg-blue-700 rounded-md p-2">
+					<option value="">--</option>
+					<option value="hard">Hard</option>
+					<option value="medium">medium</option>
+					<option value="easy">Easy</option>
+				</select>
+			</div>
+			<span id="mainMessage"></span>
+			<div>
+				<div id="inputDiv" class="flex gap-2 mx-auto p-2 items-center w-64">
+					<input
+						type="number"
+						name="input"
+						id="input"
+						placeholder="Enter a number"
+						class="rounded w-32 p-2" />
+					<button
+						id="btn"
+						type="submit"
+						class="button mx-auto rounded-md p-1 bg-blue-700 font-bold">
+						Submit
+					</button>
+					<button
+						type="reset"
+						id="reset"
+						class="mx-auto rounded-md p-1 bg-blue-700 font-bold">
+						Restart
+					</button>
+				</div>
+				<div>
+					<span
+						><span id="remainingGuesses" class="mx-1"></span>guesses
+						remaining!</span
+					>
+				</div>
+			</div>
+			<span id="message"></span>
+		</main>
+		<script>
+			const secret = 56;
+			let guess;
+			let trials = 0;
+			let guesses = 0;
+			let gameStarted = false;
+			let errormessage = document.querySelector("#message");
+			const submitButton = document.querySelector("#btn");
+			let input = document.querySelector("input");
+			let mainMessage = document.querySelector("#mainMessage");
+			mainMessage.textContent = `Enter a guess number between 1 and 100`;
+			let remainingGuesses = document.querySelector("#remainingGuesses");
+
+			// Helper functions for DRY code
+			function setErrorMessage(message, classes) {
+				errormessage.textContent = message;
+				errormessage.setAttribute("class", classes);
+			}
+
+			function setButtonState(isDisabled, classes) {
+				submitButton.disabled = isDisabled;
+				submitButton.setAttribute("class", classes);
+			}
+
+			// Main game logic
+			submitButton.addEventListener("click", () => {
+				gameStarted = true;
+				selectElement.disabled = true;
+				if (trials === 0) {
+					setErrorMessage(
+						"Please select the difficulty level!",
+						"font-bold text-red-700 bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+					);
+					setButtonState(true, "cursor-not-allowed");
+					input.value = "";
+				} else {
+					guess = Number(input.value);
+					guesses++;
+					mainMessage.textContent = `Enter a guess number between ${
+						guess >= 1 && guess
+					} and 100`;
+					if (isNaN(guess)) {
+						setErrorMessage(
+							"Please enter a number.",
+							"font-bold text-black bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+						);
+						input.value = "";
+					} else if (guess <= 1 || guess >= 100) {
+						setErrorMessage(
+							"Your guess is out of range!",
+							"font-bold text-black bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+						);
+						input.value = "";
+					} else {
+						if (guess === secret) {
+							setErrorMessage(
+								`Congratulations! You got it right! The secret number is: ${secret}`,
+								"font-bold text-green-700 bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+							);
+						} else {
+							if (guess < secret) {
+								setErrorMessage(
+									"Too low!",
+									"font-bold text-yellow-700 bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+								);
+							} else if (guess > secret) {
+								setErrorMessage(
+									"Too high!",
+									"font-bold text-red-700 bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+								);
+							}
+
+							if (guesses >= trials) {
+								setTimeout(() => {
+									setErrorMessage(
+										`You ran out of guesses! The number was ${secret}`,
+										"font-bold text-red-700 bg-slate-300 p-3 rounded-md max-w-sm mx-auto"
+									);
+								}, 2000);
+								setButtonState(true, "cursor-not-allowed");
+							}
+						}
+
+						input.value = "";
+						remainingGuesses.textContent = trials - guesses;
+					}
+				}
+			});
+
+			let selectElement = document.getElementById("select");
+			selectElement.addEventListener("change", () => {
+				const selectedValue = selectElement.value;
+				if (selectedValue === "hard") {
+					trials = 3;
+				} else if (selectedValue === "medium") {
+					trials = 5;
+				} else if (selectedValue === "easy") {
+					trials = 10;
+				}
+
+				guesses = 0;
+				remainingGuesses.textContent = trials;
+				input.value = "";
+				setErrorMessage("", "");
+				setButtonState(
+					false,
+					"button mx-auto rounded-md p-1 bg-blue-700 font-bold"
+				);
+			});
+
+			const resetInput = document.getElementById("reset");
+			resetInput.addEventListener("click", () => {
+				selectElement.value = "--";
+				selectElement.disabled = false;
+				gameStarted = false;
+				trials = 0;
+				guesses = 0;
+				input.value = "";
+				remainingGuesses.textContent = "";
+				setErrorMessage("", "");
+				mainMessage.textContent = `Enter a guess number between 1 and 100`;
+				setButtonState(
+					false,
+					"button mx-auto rounded-md p-1 bg-blue-700 font-bold"
+				);
+			});
+		</script>
+	</body>
+</html>

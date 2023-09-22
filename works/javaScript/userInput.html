@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>user Input</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		onload="getData()"
+		class="container bg-slate-700 text-slate-100 text-2xl p-4 mx-auto gap-4 justify-between items-center">
+		<h1 class="text-4xl font-bold mb-4">Storage Element</h1>
+		<button type="button" class="border rounded p-2 mx-auto">
+			<a href="./localStoragePage.html">Back to Home Page</a>
+		</button>
+		<div id="myDiv"></div>
+		<script>
+			function getData() {
+				let myData = localStorage.getItem("myData"); // get the string from localStorage
+				myData = JSON.parse(myData); // parse the string to an object
+				document.getElementById(
+					"myDiv"
+				).innerHTML = `<div class="flex p-4 justify-between mx-auto w-25 items-center">
+				<span class="text-red-50">First Name: ${myData.name}</span>
+                <span>Last Name: ${myData.password}</span>`;
+			}
+		</script>
+	</body>
+</html>

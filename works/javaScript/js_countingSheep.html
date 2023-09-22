@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/js_countingSheep.css" />
+		<title>js_counting</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">
+				Having a hard time falling asleep? Try counting sheep!
+			</h1>
+			<section class="topButton">
+				<button onclick="add()">Add 1 Sheep</button>
+				<button onclick="sub()">Subtract 1Sheep</button>
+				<button onclick="double()">Double Sheep</button>
+				<button onclick="half()">Half Sheep</button>
+			</section>
+
+			<div id="sheep-div"></div>
+		</div>
+		<script>
+			let counter = 0;
+			function add() {
+				counter++;
+
+				const myImg = '<img src="./images/sheep.png" alt="" class="sheep">';
+				const myNumber = `<span class="num">${counter}</span>`;
+				const myAudio =
+					'<audio src="./audio/sheepSound.mp3" preload="auto" autoplay></audio>';
+				document.getElementById("sheep-div").innerHTML +=
+					myImg + myNumber + myAudio;
+			}
+			function sub() {
+				counter--;
+				const myImg = '<img src="./images/sheep.png" alt="" class="sheep">';
+				const myNumber = `<span class="num">${counter}</span>`;
+				const myAudio =
+					'<audio src="./audio/sheepSound.mp3" preload="auto" autoplay></audio>';
+				document.getElementById("sheep-div").innerHTML +=
+					myImg + myNumber + myAudio;
+			}
+			function double() {
+				counter += counter;
+
+				const myImg = '<img src="./images/sheep.png" alt="" class="sheep">';
+				const myNumber = `<span class="num">${counter}</span>`;
+				const myAudio =
+					'<audio src="./audio/sheepSound.mp3" preload="auto" autoplay></audio>';
+				document.getElementById("sheep-div").innerHTML +=
+					myImg + myNumber + myAudio;
+			}
+			function half() {
+				counter -= counter / 2;
+				const myImg = '<img src="./images/sheep.png" alt="" class="sheep">';
+				const myNumber = `<span class="num">${counter}</span>`;
+				const myAudio =
+					'<audio src="./audio/sheepSound.mp3" preload="auto" autoplay></audio>';
+				document.getElementById("sheep-div").innerHTML +=
+					myImg + myNumber + myAudio;
+			}
+		</script>
+	</body>
+</html>

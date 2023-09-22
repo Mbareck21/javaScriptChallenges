@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/js_donut_challenge.css" />
+    <title>JavaScript Donut Challenge</title>
+    <script>
+      function losing() {
+        console.log("Not there yet!");
+        alert("DOH!! Chocolate Filling!!");
+      }
+
+      function winnig() {
+        console.log("User selected win");
+        window.location.href =
+          "https://www.nme.com/wp-content/uploads/2017/03/simpsons-the-great-phatsby-1-696x442.jpg";
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Find the Jelly Filled Donut</h1>
+      <div class="donut-container">
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+
+        <button class="donutbtn" onclick="winnig()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <button class="donutbtn" onclick="losing()">
+          <img src="/assets/images/donuts/donut.png" class="donut" />
+        </button>
+        <img src="/assets/images/donuts/homer.jpg" alt="" class="homer" />
+      </div>
+    </main>
+  </body>
+</html>

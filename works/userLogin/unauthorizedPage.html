@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Unauthorized Page</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body
+		class="text-slate-300 bg-[#383d44] p-4 font-mono flex flex-col items-center gap-4">
+		<h1></h1>
+
+		<script>
+			const privateElement = document.querySelector("h1");
+			let data = localStorage.getItem("userData");
+			data = JSON.parse(data);
+
+			if (!data || !data.authorized) {
+				privateElement.classList.add(
+					"text-red-500",
+					"text-2xl",
+					"text-center",
+					"p-2",
+					"font-medium"
+				);
+				privateElement.innerHTML =
+					"You cannot access this page unless authenticated!";
+				const button = document.createElement("button");
+				button.innerHTML = "Sign Up";
+				button.classList.add(
+					"border",
+					"rounded",
+					"p-2",
+					"mx-auto",
+					"hover:text-orange-500",
+					"font-bold"
+				);
+				button.addEventListener("click", function () {
+					window.location.href = "./signUp.html";
+				});
+				document.body.appendChild(button);
+			} else {
+				privateElement.innerHTML = `Welcome ${data.name}! You are viewing your parivate content!`;
+				const signOutButton = document.createElement("button");
+				signOutButton.innerHTML = "Sign Out";
+				signOutButton.addEventListener("click", function () {
+					window.location.href = "./signUp.html";
+					localStorage.removeItem("userData");
+					alert("Your user information has been cleared");
+				});
+				document.body.appendChild(signOutButton);
+			}
+		</script>
+	</body>
+</html>

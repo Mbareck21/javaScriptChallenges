@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Conversion</title>
+		<link rel="stylesheet" href="./css/temperature.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<button type="button" class="theme">Change Theme</button>
+			<fieldset>
+				<h1>Conversion Tool</h1>
+				<div class="divOne">
+					<label for="options">Select Starting Unit:</label>
+					<select name="options" id="select" onchange="inptChange()">
+						<option value="">Select One</option>
+						<option value="fahrenheit">Fahrenheit</option>
+						<option value="celsius">Celsius</option>
+					</select>
+				</div>
+				<div class="divTwo">
+					<label for="degrees">Enter Starting Degree:</label>
+					<input type="number" name="degrees" id="degrees" />
+				</div>
+				<button onclick="converter()">Calculate</button>
+				<div id="small-div">
+					<span>Converting to:</span><span id="varSpan"></span>
+				</div>
+
+				<span id="hidden-result"></span>
+			</fieldset>
+		</main>
+		<footer></footer>
+		<script src="./js/temperature.js"></script>
+	</body>
+</html>
