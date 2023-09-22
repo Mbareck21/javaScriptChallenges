@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Assignment</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./js/localStorage.js"></script>
+	</head>
+	<body
+		class="container bg-slate-700 text-slate-100 text-2xl p-4 flex flex-col gap-4 justify-between items-center">
+		<h1 class="text-4xl font-bold mb-4">Add User Data</h1>
+		<p>Please register your user information below</p>
+		<div class="flex justify-between gap-2 mx-auto flex-col">
+			<span
+				class="text-orange-500 fon text-2xl text-center p-2"
+				id="errMessage"></span>
+
+			<div class="flex gap-2">
+				<label
+					for="name"
+					class="border rounded p-1 mx-auto text-slate-300">
+					Name:
+					<input
+						type="text"
+						id="name"
+						placeholder="Name"
+						class="border rounded p-1 mx-auto text-slate-950" />
+				</label>
+				<label for="password" class="border rounded p-1 mx-auto text-slate-300">
+					Password:
+					<input
+						type="number"
+						id="password"
+						placeholder="Password"
+						class="border rounded p-1 mx-auto text-slate-950" />
+				</label>
+			</div>
+			<div class="flex flex-col">
+				<button
+					onclick="saveData()"
+					type="submit"
+					class="border rounded p-2 mx-auto">
+					Submit
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

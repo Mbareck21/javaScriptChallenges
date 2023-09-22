@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "simpsonFont";
+    src: url("../assets/Simpsonfont.ttf");
+}
+
+.title {
+    font-family: simpsonFont;
+    text-align: center;
+    color: #ffd90f;
+    font-size: 3em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.donut-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.donutbtn {
+    width: fit-content;
+    background: none;
+    border: none;
+}
+
+.donut {
+    max-width: 10em;
+}
+
+.homer {
+    max-width: 40%;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+}

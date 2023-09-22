@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Inputs</title>
+		<link rel="stylesheet" href="./css/js_inputs.css" />
+	</head>
+	<body>
+		<main>
+			<fieldset>
+				<h1>Get Off Your Act Lets do Some MATH!</h1>
+
+				<div>
+					<label for="myIpt">Addition:</label>
+					<input type="number" id="myIpt1" />
+					<span>+</span>
+					<input type="number" id="myIpt11" />
+					<button onClick="add()">=</button>
+					<input type="number" id="resInput1" />
+				</div>
+				<div>
+					<label for="myIpt">Subtraction:</label>
+					<input type="number" id="myIpt2" />
+					<span>-</span>
+					<input type="number" id="myIpt22" />
+
+					<button onclick="sub()">=</button>
+					<input type="number" id="resInput2" />
+				</div>
+				<div>
+					<label for="myIpt">Multiplication:</label>
+					<input type="number" id="myIpt3" />
+					<span>*</span>
+					<input type="number" id="myIpt33" />
+
+					<button onclick="multi()">=</button>
+					<input type="number" id="resInput3" />
+				</div>
+				<div>
+					
+					<label for="myIpt">Division:</label>
+					<input type="number" id="myIpt4" />
+					<span>/</span>
+					<input type="number" id="myIpt44" />
+
+					<button onclick="div()">=</button>
+					<input type="number" id="resInput4" />
+				</div>
+			</fieldset>
+		</main>
+
+		<script>
+			function add() {
+				const myImage = document.createElement("img");
+				myImage.setAttribute("src", "./images/jackBlack.gif");
+				const firstVal = document.getElementById("myIpt1").value;
+				const secondeVal = document.getElementById("myIpt11").value;
+				document.getElementById("resInput1").value =
+					Number(firstVal) + Number(secondeVal);
+				document.body.appendChild(myImage);
+			}
+			function sub() {
+				const firstVal = document.getElementById("myIpt2").value;
+				const secondeVal = document.getElementById("myIpt22").value;
+				document.getElementById("resInput2").value =
+					Number(firstVal) - Number(secondeVal);
+			}
+			function multi() {
+				const firstVal = document.getElementById("myIpt3").value;
+				const secondeVal = document.getElementById("myIpt33").value;
+				document.getElementById("resInput3").value =
+					Number(firstVal) * Number(secondeVal);
+			}
+
+			function div() {
+				const firstVal = document.getElementById("myIpt4").value;
+				const secondeVal = document.getElementById("myIpt44").value;
+				document.getElementById("resInput4").value =
+					Number(firstVal) / Number(secondeVal);
+			}
+		</script>
+	</body>
+</html>

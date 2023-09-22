@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5em;
+        background: #b7b7bd33;
+      }
+
+      header {
+        /* background-color: #fff; */
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: none;
+        margin: 0;
+        background: rgba(36, 36, 38, 0.2);
+        box-shadow: 5px 0px 20px rgb(222, 223, 224),
+          inset 0 -10px 5px rgba(20, 10, 10, 0);
+        margin-bottom: 1em;
+      }
+
+      .navbar-brand-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .navbar-brand:hover {
+        color: #000;
+      }
+      .navbar-brand {
+        font-size: 30px;
+        font-weight: bold;
+        color: #ff6a3d;
+        text-decoration: none;
+      }
+
+      .navbar-brand-container img {
+        position: absolute;
+        left: 50%;
+        width: 100px;
+        border: none;
+        border-radius: 250px;
+        transform: scaleX(-1);
+        box-shadow: 0 0px 20px rgb(222, 223, 224),
+          inset 0 -10px 20px rgba(20, 10, 10, 0);
+        backdrop-filter: blur(20px);
+        z-index: -1;
+      }
+      .navbar-brand-container img:hover {
+        background-color: #1a2238;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .navbar li {
+        list-style: none;
+      }
+      .navbar li a {
+        color: #f4db7d;
+        padding: 15px;
+        text-decoration: none;
+        color: #171616;
+        font-weight: bold;
+      }
+      .navbar li a:hover {
+        color: #f44336;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      h1 span:nth-child(1) {
+        color: #ff0000;
+      }
+      h1 span:nth-child(2) {
+        color: #ff7f00;
+      }
+      h1 span:nth-child(3) {
+        color: #ffff00;
+      }
+      h1 span:nth-child(4) {
+        color: #00ff00;
+      }
+      h1 span:nth-child(6) {
+        color: #0000ff;
+      }
+      h1 span:nth-child(7) {
+        color: #4b0082;
+      }
+      h1 span:nth-child(8) {
+        color: #9400d3;
+      }
+      h1 span:nth-child(10) {
+        color: #ff00ff;
+      }
+      h1 span:nth-child(11) {
+        color: #00ffff;
+      }
+      h1 span:nth-child(12) {
+        color: #ff1493;
+      }
+
+      table {
+        width: 80%;
+        margin: auto;
+        /* border: 1px solid salmon; */
+        width: fit-content;
+        padding: 2px;
+      }
+
+      td {
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      img {
+        padding: 2px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="#">Mo.M</a>
+        <img src="../assets/images/ai.png" alt="ai image" />
+      </div>
+
+      <ul class="navbar">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <div>
+      <table>
+        <h1>
+          <span>F</span>
+          <span>i</span>
+          <span>n</span>
+          <span>d </span>
+
+          <span>T</span>
+          <span>h</span>
+          <span>e </span>
+
+          <span>R</span>
+          <span>a</span>
+          <span>b</span>
+          <span>b</span>
+          <span>i</span>
+          <span>t</span>
+        </h1>
+
+        <tr>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./rabbit.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+
+        <tr>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+          <td>
+            <a href="./duck.html"><img src="./hole.jpg" alt="img" /></a>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+      </table>
+      <table style="border: 1px solid; border-radius: 5px; padding: 1px">
+        <h3 style="text-align: center"><b>LeaderBoard: </b></h3>
+        <tr>
+          <td style="padding: 2px"><b>Username</b></td>
+          <td style="padding: 2px"><b>Score</b></td>
+        </tr>
+        <tr style="background-color: yellow">
+          <td>FogHorn</td>
+          <td>100</td>
+        </tr>
+        <tr style="background-color: greenyellow">
+          <td>Tweety</td>
+          <td>80</td>
+        </tr>
+        <tr style="background-color: rgb(109, 109, 199)">
+          <td>Silvester</td>
+          <td>75</td>
+        </tr>
+        <tr style="background-color: rgb(233, 87, 87)">
+          <td>ElmerFudd</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

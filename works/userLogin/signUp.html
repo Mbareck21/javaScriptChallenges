@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./signUp.js"></script>
+	</head>
+	<body class="text-slate-300 bg-[#383d44] p-4 font-mono">
+		<main class="flex flex-col gap-4 w-full p-2">
+			<h1 class="text-4xl font-bold text-center mb-4">Register User Account</h1>
+			<p class="text-center">
+				Please register your user account information to access your private
+				page
+			</p>
+			<button
+				type="button"
+				class="border rounded p-2 mx-auto hover:text-orange-500">
+				<a href="./unauthorizedPage.html"> Private Page</a>
+			</button>
+			<div class="flex flex-col gap-2 justify-center items-center">
+				<span
+					class="text-red-500 fon text-2xl text-center p-2"
+					id="errMessage"></span>
+
+				<div class="flex flex-col gap-2">
+					<label for="name" class="border rounded mx-auto text-slate-300 p-1">
+						Name:
+						<input
+							type="text"
+							id="name"
+							placeholder="Name"
+							class="border rounded p-1 mx-auto text-slate-950" />
+					</label>
+					<label
+						for="password"
+						class="border rounded mx-auto text-slate-300 p-1">
+						Password:
+						<input
+							type="number"
+							id="password"
+							placeholder="Password"
+							class="border rounded p-1 mx-auto text-slate-950" />
+					</label>
+				</div>
+				<div class="flex justify-center w-25 gap-4 mx-auto">
+					<button
+						onclick="saveData()"
+						type="button"
+						class="border rounded p-2 font-bold hover:text-orange-500 mx-auto">
+						Sign Up
+					</button>
+					<button
+						type="button"
+						class="border rounded p-2 mx-auto font-bold hover:text-orange-500">
+						<a href="./login.html">Log in</a>
+					</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

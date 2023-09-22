@@ -1,0 +1,103 @@
+body {
+	padding: 0;
+}
+header {
+	background-color: tomato;
+	margin: auto;
+	text-align: center;
+	padding: 1rem;
+	font-size: xx-large;
+	font-weight: 900;
+}
+header h1 {
+	font-weight: bolder;
+	font-size: xx-large;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+fieldset h1 {
+	background-color: lightblue;
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+fieldset {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	border: none;
+	font-size: x-large;
+}
+div {
+	width: 100%;
+	display: flex;
+	text-align: left;
+}
+input,
+select,
+span {
+	border-radius: 5px;
+}
+button {
+	width: 100%;
+	background-color: lightgreen;
+	border-radius: 1rem;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-color: lightgreen;
+	border-width: 2px;
+	outline-style: solid;
+	font-family: monospace;
+	font-size: large;
+}
+.theme {
+	min-width: 10%;
+	max-width: 10%;
+	margin-top: 3rem;
+}
+select {
+	margin-left: auto;
+	width: 53%;
+	padding: 0.3em;
+	/* border: none; */
+}
+input {
+	margin-left: auto;
+	width: 50%;
+	padding: 0.3em;
+	/* border: none; */
+}
+span {
+	margin-right: 1rem;
+	padding: 1rem;
+}
+#hidden-result {
+	width: 100%;
+	display: none;
+	border-style: dashed;
+	text-align: center;
+}
+footer {
+	width: 100%;
+	background-color: tomato;
+	/* margin: auto; */
+	text-align: center;
+	padding: 1rem;
+	font-size: x-large;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

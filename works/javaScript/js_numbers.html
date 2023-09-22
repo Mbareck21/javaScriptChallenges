@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Numbers</title>
+    <style>
+      .content > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        padding: 2em;
+      }
+
+      h2 {
+        margin-bottom: 2rem;
+      }
+
+      .num1,
+      .num2 {
+        background: green;
+        padding: 1rem;
+        border-radius: 15px;
+      }
+
+      button {
+        background: gray;
+        width: 100px;
+        padding: 1.5em;
+        border-radius: 15px;
+      }
+
+      button:hover {
+        background: rgb(145, 90, 90);
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Coding Challenge June 22</h1>
+    <div id="content">
+      <h2>Simple Adding Machine</h2>
+      <div>
+        <span class="num1"></span>
+        <span>+</span>
+        <span class="num2"></span>
+        <span>=</span>
+        <button onclick="btnHandleClick()">Click</button>
+      </div>
+    </div>
+    <script>
+      const myVar = 2;
+
+      const num1 = document.querySelector(".num1");
+      const num2 = document.querySelector(".num2");
+      num1.textContent = myVar;
+      num2.textContent = myVar;
+
+      const btnHandleClick = () => {
+        alert(`${myVar + myVar}`);
+      };
+    </script>
+  </body>
+</html>
